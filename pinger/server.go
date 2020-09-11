@@ -1,7 +1,6 @@
 package main
 
 import (
-  "fmt"
   "context"
   "log"
   "net"
@@ -28,11 +27,6 @@ type server struct{
   Counter map[string]int32
 }
 
-type counter struct{
-  msg string
-  count int32
-}
-
 func (s *server) Ping(ctx context.Context, req *pinger.Reqest) (*pinger.Response, error) {
   text := req.Text
   s.count_msg(text)
@@ -45,7 +39,5 @@ func (s *server) Ping(ctx context.Context, req *pinger.Reqest) (*pinger.Response
 }
 
 func (s *server) count_msg(msg string) {
-  fmt.Println(s.Counter)
   s.Counter[msg] ++
-  fmt.Println(msg)
 }
