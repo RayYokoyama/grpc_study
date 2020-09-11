@@ -7,6 +7,7 @@
 
 # 起動
 ## フォルダ構成
+```
 grpc-sample
 ├ proto
 │ └ ProtocolBuffers定義
@@ -18,6 +19,8 @@ grpc-sample
 　 ├ Golangアプリ
 　 └ lib
 　 　 └ protoから自動生成
+```
+    
 ## サーバー側
 go で実装
 ```
