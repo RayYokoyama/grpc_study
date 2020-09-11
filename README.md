@@ -1,3 +1,16 @@
+# 概要
+rails サーバーの`/ping?msg=任意の文字列` へリクエストを送ると「任意の文字列」を送った回数のjsonが返ってくるだけのアプリ。
+```
+curl 'http://localhost:3000/ping?msg=hoge'
+
+→ { text: 'hoge', count: 1 }
+
+curl 'http://localhost:3000/ping?msg=hoge'
+
+→ { text: 'hoge', count: 2 } 
+
+```
+
 # requirement
 ### gRPCサーバの実装に必要
 ```$ go get -u google.golang.org/grpc```
