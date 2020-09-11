@@ -1,4 +1,5 @@
 # 概要
+grpcで何か動かしてみたくて作った。
 rails サーバーの`/ping?msg=任意の文字列` へリクエストを送ると「任意の文字列」を送った回数のjsonが返ってくるだけのアプリ。
 ```
 curl 'http://localhost:3000/ping?msg=hoge'
