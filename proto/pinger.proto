@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package pinger;
+
+service Pinger {
+  rpc Ping(Reqest) returns (Response) {}
+}
+
+message Reqest {
+  string text = 1;
+}
+
+message Response {
+  string text = 1;
+  int32 count = 2;
+}
